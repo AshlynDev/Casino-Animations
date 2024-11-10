@@ -31,7 +31,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: Build-${{ github.run_number }}  # Generate tag name based on the run number
-          name: Build ${{ github.run_number }}  # Specify the release name
+          name: Download  # Specify the release name
           draft: false
           prerelease: false
           files: target/CasinoAnimations-1.0.4.jar
