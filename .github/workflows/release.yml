@@ -25,11 +25,19 @@ jobs:
       - name: Build with Maven
         run: mvn clean package -DskipTests  # Build the JAR, skip tests for faster builds
 
-      # Step 4: Create GitHub release
-      - name: Create GitHub Release
-        id: create_release
+      - name: Publish JAR as Release
         uses: softprops/action-gh-release@v1
-        with:
-          files: target/CasinoAnimations-1.0.4.jar  # Adjust this path to your JAR file location
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub Token for authentication
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: Build-${{ github.run_number }}  # Generate tag name based on the run number
+          name: Build ${{ github.run_number }}  # Specify the release name
+          draft: false
+          prerelease: false
+          files: target/CasinoAnimations-1.0.4.jar
+          body: |
+            Build Number: ${{ github.run_number }}
+
+            For any questions or issues, feel free to open an issue.
+
+            Happy animating!
