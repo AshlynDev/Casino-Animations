@@ -7,6 +7,7 @@ import nl.ashlyn.casinoanimations.api.util.TranslationUtil;
 import nl.ashlyn.casinoanimations.command.subcommand.SubCommand;
 import nl.ashlyn.casinoanimations.config.AnimationsConfig;
 import org.bukkit.Bukkit;
+import org.bukkit.World;
 import org.bukkit.command.CommandSender;
 //import org.bukkit.generator.WorldInfo;
 
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class SetWorldCmd implements SubCommand {
 
@@ -62,8 +64,7 @@ public class SetWorldCmd implements SubCommand {
         if(!PermissionUtil.hasPermission(Arrays.asList(getPermission()), sender)) {
             return Collections.emptyList();
         }
-        //TODO: wtf
-        //return Bukkit.getWorlds().stream().map(WorldInfo::getName).collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
-        return null;
+        //Old impl for 1.13 instead of 1.18
+        return Bukkit.getWorlds().stream().map(World::getName).collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
     }
 }
