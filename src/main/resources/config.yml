@@ -1,4 +1,4 @@
-prefix: "&7[&aJustAnimations&7] &r"
+prefix: "&7[&aCasinoAnimations&7] &r"
 
 messages:
   reload: "Reloading Config..."
@@ -14,7 +14,7 @@ messages:
   delete-success: "Animation '%animation%' deleted!"
   delete-not-exists: "Animation '%animation%' does not exist!"
   animation-not-exists: "Animation does not exist!"
-  help: "Type /justanimations help to see a list of available commands."
+  help: "Type /casinoanimations help to see a list of available commands."
   toggle-reverse: "Toggled reverse mode for animation '%animation%' to %value%!"
   world-change: "Changed world for animation '%animation%' to %value%!"
   world-not-exists: "World '%value%' does not exist!"
