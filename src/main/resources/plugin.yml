@@ -1,6 +1,6 @@
-name: ${name}
-version: ${version}
-main: ${groupId}.${artifactId}
+name: CasinoAnimatons
+version: 1.0.4
+main: nl.ashlyn.casinoanimations.CasinoAnimations
 api-version: 1.13
 authors: [ Ashlyn ]
 depend:
