@@ -10,14 +10,16 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 public class PlayerListener implements Listener {
 
+    // Why was this ever implemented?
+    
     @EventHandler
     public void playerJoin(PlayerJoinEvent event) {
-        if (Bukkit.getOnlinePlayers().size() == 1) {
+        /*if (Bukkit.getOnlinePlayers().size() == 1) {
             for (IAnimation animation : CasinoAnimations.INSTANCE.getAnimations().values()) {
                 if (animation.isInactive()) continue;
                 animation.play(false);
             }
-        }
+        }*/
     }
 
     @EventHandler
